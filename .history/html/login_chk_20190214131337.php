@@ -1,7 +1,4 @@
 <?php
-	ini_set('display_errors', 1);
-	ini_set('error_reporting', E_ALL);
-
 	require_once('db.inc');
 
 	//セッション開始
@@ -26,18 +23,13 @@
 	//結果をバインドして取得
 	$stmt->bind_result($passwordHash);
 	$stmt->fetch();
-  print($stmt);
+
 	//DB接続を切断
 	$stmt->close();
 	$mysqli->close();
 
 	//入力されたパスワードを、同じソルトを使ってハッシュ化
 	$inputPasswordHash = crypt($password, $passwordHash);
-
-  print($password);
-  print($passwordHash);
-  print($passwordHash);
-  print($inputPasswordHash);
 
 	header("HTTP/1.1 301 Moved Permanently");
 	//パスワードが正しければメニューに飛ばす

@@ -1,5 +1,4 @@
 cloud680@gn.iwasaki.ac.jp
-ec2-user
 172.31.21.69
 n680cloud
 uuaqsgygpcdq1!

@@ -37,7 +37,7 @@
   print($password);
   print($passwordHash);
   print($passwordHash);
-  print($inputPasswordHash);
+  print($inputpasswordHash);
 
 	header("HTTP/1.1 301 Moved Permanently");
 	//パスワードが正しければメニューに飛ばす
