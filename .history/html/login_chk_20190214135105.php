@@ -34,14 +34,19 @@
 	//入力されたパスワードを、同じソルトを使ってハッシュ化
 	$inputPasswordHash = crypt($password, $passwordHash);
 
+  print($password);
+  print($passwordHash);
+  print($passwordHash);
+  print($inputPasswordHash);
+
 	header("HTTP/1.1 301 Moved Permanently");
 	//パスワードが正しければメニューに飛ばす
-	// if ($passwordHash == $inputPasswordHash) {
-	if ($passwordHash == $password) {
+	if($passwordHash == $inputPasswordHash){
 		$_SESSION['id'] = $id;
-    header("Location: hitokoto.php");
-    //見つからなかったまたはパスワードが違ったらログインページに戻す
-	} else {
+		header("Location: menu.php");
+	}
+	//見つからなかったまたはパスワードが違ったらログインページに戻す
+	else{
 		$_SESSION['id'] = '';
 		header("Location: login.php?err=1");
 	}
