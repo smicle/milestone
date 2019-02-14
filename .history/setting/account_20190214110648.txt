@@ -1,0 +1,8 @@
+n680cloud
+cloud680@gn.iwasaki.ac.jp
+uuaqsgygpcdq1!
+172.31.21.69
+mysql -h milestone.cvut6lejm98r.us-east-1.rds.amazonaws.com:3306 -u n680cloud -p
+uuaqsgygpcdq1!
+
+milestone.cvut6lejm98r.us-east-1.rds.amazonaws.com3306
