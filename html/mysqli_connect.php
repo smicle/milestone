@@ -1,5 +1,5 @@
 <?php
-  require_once('../db.inc');
+  require_once('db.inc');
 
   $mysqli = new mysqli($dbserver, $dbuser, $passwd, $dbname);
   if ($mysqli->connect_error) {
