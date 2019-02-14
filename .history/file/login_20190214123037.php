@@ -1,10 +1,9 @@
 <?php
 	$errorMessage = "";
-	if (@$_GET['err'] == '1') {
+	if(@$_GET['err'] == '1'){
 		$errorMessage = "ＩＤまたはパスワードが違います<br>";
 	}
 ?>
-
 <html>
 <head>
 	<link rel="stylesheet" href="css/default.css" type="text/css">

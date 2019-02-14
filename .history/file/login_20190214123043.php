@@ -4,7 +4,6 @@
 		$errorMessage = "ＩＤまたはパスワードが違います<br>";
 	}
 ?>
-
 <html>
 <head>
 	<link rel="stylesheet" href="css/default.css" type="text/css">
