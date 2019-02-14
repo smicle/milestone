@@ -4,8 +4,9 @@
   $password = $_POST['password'];
 
   // mysqlの準備
+  require_once('db.inc');
   session_start();
-  require('fn/mysqli_connect.php');
+  require('fn/mysqliConnect.php');
 
   // SQL文を実行
   $stmt = $mysqli->prepare('SELECT password FROM user WHERE id=?');

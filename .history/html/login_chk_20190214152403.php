@@ -1,16 +1,23 @@
 <?php
+  require_once('db.inc');
+  session_start();
+
   // 入力された値を取得
   $id = $_POST['id'];
   $password = $_POST['password'];
 
-  // mysqlの準備
-  session_start();
-  require('fn/mysqli_connect.php');
+  require('fn/mysqliConnect.php');
+
+  // SQL文を準備(パラメタ部は「?」とする)
+  $stmt = $mysqli->prepare('SELECT password FROM user WHERE id=?');
+
+  // パラメータをバインド
+  $stmt->bind_param('s', $id);
 
   // SQL文を実行
-  $stmt = $mysqli->prepare('SELECT password FROM user WHERE id=?');
-  $stmt->bind_param('s', $id);
   $stmt->execute();
+
+  // 結果をバインドして取得
   $stmt->bind_result($passwordHash);
   $stmt->fetch();
 

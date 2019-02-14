@@ -5,7 +5,7 @@
 
   // mysqlの準備
   session_start();
-  require('fn/mysqli_connect.php');
+  require('fn/mysqliConnect.php');
 
   // SQL文を実行
   $stmt = $mysqli->prepare('SELECT password FROM user WHERE id=?');

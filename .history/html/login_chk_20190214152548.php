@@ -3,14 +3,17 @@
   $id = $_POST['id'];
   $password = $_POST['password'];
 
-  // mysqlの準備
+  require_once('db.inc');
   session_start();
-  require('fn/mysqli_connect.php');
+  require('fn/mysqliConnect.php');
 
-  // SQL文を実行
   $stmt = $mysqli->prepare('SELECT password FROM user WHERE id=?');
   $stmt->bind_param('s', $id);
+
+  // SQL文を実行
   $stmt->execute();
+
+  // 結果をバインドして取得
   $stmt->bind_result($passwordHash);
   $stmt->fetch();
 

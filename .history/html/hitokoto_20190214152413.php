@@ -1,5 +1,4 @@
 <?php
-	require('fn/ini_set.php');
   //ログインユーザ情報を取得
   $id = $_SESSION['id'];
 
@@ -10,7 +9,9 @@
     exit(0);
   }
 
-  require('fn/mysqli_connect.php');
+  require_once('db.inc');
+	session_start();
+  require('fn/mysqliConnect.php');
 
   $stmt = $mysqli->prepare('SELECT name FROM user WHERE id=?');
   $stmt->bind_param('s', $id);

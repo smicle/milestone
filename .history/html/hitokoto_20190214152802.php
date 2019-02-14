@@ -10,7 +10,7 @@
     exit(0);
   }
 
-  require('fn/mysqli_connect.php');
+  require('fn/mysqliConnect.php');
 
   $stmt = $mysqli->prepare('SELECT name FROM user WHERE id=?');
   $stmt->bind_param('s', $id);
