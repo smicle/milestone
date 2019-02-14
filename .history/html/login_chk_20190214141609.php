@@ -6,6 +6,7 @@
   $id = $_POST['id'];
   $password = $_POST['password'];
 
+  //DBに接続
   $mysqli = new mysqli($dbserver, $dbuser, $passwd, $dbname);
 
   //SQL文を準備(パラメタ部は「？」とする)
@@ -29,7 +30,7 @@
   header("HTTP/1.1 301 Moved Permanently");
 
   //パスワードが正しければメニューに飛ばす
-  if ($password == $passwordHash) {
+  if ($passwordHash == $password) {
     $_SESSION['id'] = $id;
     header("Location: hitokoto.php");
     //見つからなかったまたはパスワードが違ったらログインページに戻す

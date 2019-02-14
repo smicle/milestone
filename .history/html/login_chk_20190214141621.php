@@ -6,6 +6,7 @@
   $id = $_POST['id'];
   $password = $_POST['password'];
 
+  //DBに接続
   $mysqli = new mysqli($dbserver, $dbuser, $passwd, $dbname);
 
   //SQL文を準備(パラメタ部は「？」とする)
