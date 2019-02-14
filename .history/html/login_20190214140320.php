@@ -1,7 +1,7 @@
 <?php
   $errorMessage = "";
   if (@$_GET['err'] == '1') {
-    $errorMessage = "IDまたはパスワードが違います<br>";
+    $errorMessage = "ＩＤまたはパスワードが違います<br>";
   }
 ?>
 
@@ -13,11 +13,11 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <!-- <link rel="stylesheet" href="css/default.css" type="text/css"> -->
   <title>ログイン</title>
-</head>
+</head>.2019-02-14 14:03
 
 <body>
   <h1>ログイン</h1>
-  <span class="error"><?php print($errorMessage);?></span>
+  <span class="error"><?php echo $errorMessage ?></span>
 
   <form method="post" action="login_chk.php">
     <table>
