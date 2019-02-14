@@ -18,16 +18,13 @@
 <body>
 	<h1>ログイン</h1>
 	<span class="error"><?php echo $errorMessage ?></span>
-
 	<form method="post" action="login_chk.php">
 		<table>
-			<tr><th>ユーザID:</th><td><input type="text" name="id" size="12"></td></tr>
-			<tr><th>パスワード:</th><td><input type="password" name="password" size="20"></td></tr>
+		<tr><th>ユーザID:</th><td><input type="text" name="id" size="12"></td></tr>
+		<tr><th>パスワード:</th><td><input type="password" name="password" size="20"></td></tr>
 		</table>
-
 		<input type="submit" value="ログイン">
 	</form>
-
 </body>
 
 </html>

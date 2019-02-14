@@ -50,7 +50,10 @@
 <div id="view">
 <h1>投稿一覧</h1>
 <div id="detail">
-
+<p><strong>2019/02/14 12:51:43 さん&nbsp;</strong><br>idてきとうでもはいれるんだけど<br><br></p>
+<p><strong>2019/02/14 12:51:23 さん&nbsp;</strong><br>asad<br><br></p>
+<p><strong>2019/02/14 12:51:10 さん&nbsp;</strong><br>a<br><br></p>
+<p><strong>2019/02/14 12:48:15 taroさん&nbsp;<button class="delete" id="del_52">削除</button></strong><br>参る<br><br></p>
 </div>
 </div>
 </body>
