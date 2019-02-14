@@ -1,13 +1,13 @@
 <?php
-	//ログインユーザ情報を取得
-	$id = $_SESSION['id'];
+//ログインユーザ情報を取得
+$id = $_SESSION['id'];
 
-	//ログインしていない場合はログインページに飛ばす
-	if ($id == '') {
-		header('HTTP/1.1 301 Moved Permanently');
-		header('Location: login.php');
-		exit(0);
-	}
+//ログインしていない場合はログインページに飛ばす
+if ($id == '') {
+	header("HTTP/1.1 301 Moved Permanently");
+	header("Location: login.php");
+	exit(0);
+}
 
   require_once('db.inc');
   session_start();
@@ -17,14 +17,10 @@
     print($mysqli->connect_error);
     exit();
   } else {
-    $mysqli->set_charset('utf8');
+    $mysqli->set_charset("utf8");
   }
 
-	$stmt = $mysqli->prepare('SELECT name FROM user WHERE id=?');
-	$stmt->bind_param('s', $id);
-	$stmt->execute();
-	$stmt->bind_result($userName);
-  $stmt->fetch();
+
 ?>
 
 <html>
@@ -76,7 +72,7 @@
   <div id="input">
     <h1>一言掲示板</h1>
     <form method="post" id="msgform" action="hitokoto.php">
-      <p class="comment"><?php print($userName) ?>さん、こんにちは！&nbsp;&nbsp;<a href="logout.php">ログアウト</a></p>
+      <p class="comment">taroさん、こんにちは！&nbsp;&nbsp;<a href="logout.php">ログアウト</a></p>
       <p class="comment">コメント：<input type="text" id="msg" name="msg" style="width:330px" />
       <button id="sendBtn">投稿する</button></p>
     </form>

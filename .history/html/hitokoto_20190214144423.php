@@ -76,7 +76,9 @@
   <div id="input">
     <h1>一言掲示板</h1>
     <form method="post" id="msgform" action="hitokoto.php">
-      <p class="comment"><?php print($userName) ?>さん、こんにちは！&nbsp;&nbsp;<a href="logout.php">ログアウト</a></p>
+      <p class="comment">
+				<?php print($userName) ?>
+				さん、こんにちは！&nbsp;&nbsp;<a href="logout.php">ログアウト</a></p>
       <p class="comment">コメント：<input type="text" id="msg" name="msg" style="width:330px" />
       <button id="sendBtn">投稿する</button></p>
     </form>

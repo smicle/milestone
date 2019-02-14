@@ -15,7 +15,7 @@
   }
 
   // SQL文を準備(パラメタ部は「?」とする)
-  $stmt = $mysqli->prepare('SELECT password FROM user WHERE id=?');
+  $stmt = $mysqli->prepare('select password from user where id=?');
 
   // パラメータをバインド
   $stmt->bind_param('s', $id);

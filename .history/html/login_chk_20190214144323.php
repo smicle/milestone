@@ -24,7 +24,7 @@
   $stmt->execute();
 
   // 結果をバインドして取得
-  $stmt->bind_result($passwordHash);
+  $stmt->bind_result($);
   $stmt->fetch();
 
   // DB接続を切断
