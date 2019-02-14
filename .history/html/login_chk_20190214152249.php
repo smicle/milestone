@@ -14,8 +14,6 @@
   } else {
     $mysqli->set_charset('utf8');
   }
-  */
-  require('fn/mysqliConnect.php');
 
   // SQL文を準備(パラメタ部は「?」とする)
   $stmt = $mysqli->prepare('SELECT password FROM user WHERE id=?');

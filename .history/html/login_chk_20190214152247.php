@@ -5,8 +5,7 @@
   // 入力された値を取得
   $id = $_POST['id'];
   $password = $_POST['password'];
-
-  /*
+/*
   $mysqli = new mysqli($dbserver, $dbuser, $passwd, $dbname);
   if ($mysqli->connect_error) {
     print($mysqli->connect_error);
@@ -14,8 +13,6 @@
   } else {
     $mysqli->set_charset('utf8');
   }
-  */
-  require('fn/mysqliConnect.php');
 
   // SQL文を準備(パラメタ部は「?」とする)
   $stmt = $mysqli->prepare('SELECT password FROM user WHERE id=?');
