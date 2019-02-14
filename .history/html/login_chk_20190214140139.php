@@ -41,6 +41,7 @@
     $_SESSION['id'] = $id;
     header("Location: hitokoto.php");
     //見つからなかったまたはパスワードが違ったらログインページに戻す
+  
   } else {
     $_SESSION['id'] = '';
     header("Location: login.php?err=1");
