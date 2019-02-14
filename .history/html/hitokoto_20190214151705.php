@@ -2,6 +2,7 @@
   ini_set('display_errors', 1);
   ini_set('error_reporting', E_ALL);
 
+  require('function.php');
   //ログインユーザ情報を取得
   $id = $_SESSION['id'];
 
@@ -22,7 +23,7 @@
   } else {
     $mysqli->set_charset('utf8');
   }*/
-  require('function.php');
+  mysqliConnect();
 
   $stmt = $mysqli->prepare('SELECT name FROM user WHERE id=?');
   $stmt->bind_param('s', $id);

@@ -6,4 +6,5 @@
   } else {
     $mysqli->set_charset('utf8');
   }
+  }
 ?>
