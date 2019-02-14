@@ -1,5 +1,4 @@
 <?php
-	require('function.php');
   //ログインユーザ情報を取得
   $id = $_SESSION['id'];
 
@@ -13,14 +12,13 @@
   require_once('db.inc');
   session_start();
 
-  // $mysqli = new mysqli($dbserver, $dbuser, $passwd, $dbname);
-  // if ($mysqli->connect_error) {
-    // print($mysqli->connect_error);
-    // exit();
-  // } else {
-    // $mysqli->set_charset('utf8');
-	// }
-	mysqliConnect();
+  $mysqli = new mysqli($dbserver, $dbuser, $passwd, $dbname);
+  if ($mysqli->connect_error) {
+    print($mysqli->connect_error);
+    exit();
+  } else {
+    $mysqli->set_charset('utf8');
+  }
 
   $stmt = $mysqli->prepare('SELECT name FROM user WHERE id=?');
   $stmt->bind_param('s', $id);
@@ -29,7 +27,7 @@
   $stmt->fetch();
 
   $stmt->close();
-  $mysqli->close();
+  $my->close();
 ?>
 
 <html>

@@ -19,8 +19,7 @@
     // exit();
   // } else {
     // $mysqli->set_charset('utf8');
-	// }
-	mysqliConnect();
+  // }
 
   $stmt = $mysqli->prepare('SELECT name FROM user WHERE id=?');
   $stmt->bind_param('s', $id);
