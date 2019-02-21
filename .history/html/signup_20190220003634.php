@@ -10,8 +10,7 @@
   $stmt = $pdo->prepare('SELECT name FROM user WHERE id=?');
   $stmt->bindValue(1, $id);
   $stmt->execute();
-  $name = $stmt->fetch();
-  $name = $name['name'];
+  $name = $stmt->fetch()['name'];
 
   if ($name) {
     $_SESSION['id']   = null;
