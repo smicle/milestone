@@ -1,0 +1,14 @@
+react.js
+タイトル Bulletin board
+インスタ風ログイン画面
+いいね機能
+プルダウンメニュー
+削除（自分）
+非表示
+自分の投稿のみ表示
+検索画面
+参考のサイト https://girlschannel.net/
+favicon
+グーグルWebフォント
+サインアウトボタン
+ユーザー登録

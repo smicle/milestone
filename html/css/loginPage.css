@@ -1,0 +1,105 @@
+/* https://fonts.google.com/ */
+@import url(https://fonts.googleapis.com/css?family=Abril+Fatface);
+@import url(https://fonts.googleapis.com/css?family=Noto+Sans+JP);
+
+html {
+  width : 100%;
+  height : 100%;
+  overflow : hidden;
+}
+
+body {
+	width : 100%;
+	height : 100%;
+	font-family: 'Open Sans', sans-serif;
+  background: linear-gradient(-45deg, rgba(252, 176, 184, .6), rgba(240, 124, 255, .6)) fixed,
+    url(../img/sakura.jpg) fixed;
+  background-size: cover;
+  font-family: "Noto Sans JP";
+}
+
+input {
+	width: 100%;
+	margin-bottom: 10px;
+	border: none;
+	outline: none;
+	padding: 10px;
+	font-size: 13px;
+	color: rgb(41, 41, 41);
+	border: 1px solid rgba(255, 0, 0, 0.404);
+  border-radius: 4px;
+}
+
+.btn-sticky {
+  display: inline-block;
+  padding: 0.5em 1em;
+  text-decoration: none;
+  background: #f7f7f7;
+  border-left: solid 6px #ff7c5c; /*左線*/
+  color: #ff7c5c; /*文字色*/
+  font-weight: bold;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.29);
+  width: 260px;
+  text-align: center;
+}
+
+.btn-sticky:hover {
+  box-shadow: inset 0 0 2px rgba(128, 128, 128, 0.1);
+  transform: translateY(2px);
+}
+
+#loginMenu {
+  position: absolute;
+  border-radius: 4px;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  margin: auto;
+  width: 450px;
+  height: 450px;
+  background: rgba(250, 243, 234, 0.8);
+}
+
+#loginForm {
+	position: absolute;
+	top: 33%;
+	left: 50%;
+  margin: -150px 0 0 -150px;
+	width: 300px;
+  height: 300px;
+}
+
+#loginForm h1 {
+  font-family: 'Abril Fatface', cursive;
+  font-size: 40px;
+  color: rgb(41, 41, 41);
+  letter-spacing: 1px;
+  text-align: center;
+}
+
+#errorMessage {
+  position: absolute;
+	top: 93%;
+	left: 50%;
+  margin: -150px 0 0 -150px;
+	width: 300px;
+  height: 100px;
+  color: red;
+}
+
+#loginToggle {
+  position: absolute;
+	top: 118%;
+	left: 50%;
+  margin: -150px 0 0 -150px;
+  padding-top: 5px;
+	width: 300px;
+  height: 35px;
+  text-align: center;
+}
+
+#loginToggle > a {
+  border-left: solid 6px red; /*左線*/
+  color: red; /*文字色*/
+}
