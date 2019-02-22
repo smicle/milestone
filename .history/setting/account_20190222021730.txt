@@ -9,7 +9,5 @@ mysql -h milestone.cvut6lejm98r.us-east-1.rds.amazonaws.com -u n680cloud -p
 
 http://ec2-18-234-235-162.compute-1.amazonaws.com/login.php
 
-alter table msg add like int;
-alter table goods add price int;
 
-ALTER TABLE `msg` ADD `like` `int`;
+alter table goods add price int;

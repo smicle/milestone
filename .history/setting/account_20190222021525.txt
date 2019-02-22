@@ -3,13 +3,9 @@ ec2-user
 172.31.21.69
 n680cloud
 uuaqsgygpcdq1!
+milestone.cvut6lejm98r.us-east-1.rds.amazonaws.com
 ec2-user@ec2-52-54-91-179.compute-1.amazonaws.com
 
 mysql -h milestone.cvut6lejm98r.us-east-1.rds.amazonaws.com -u n680cloud -p
 
 http://ec2-18-234-235-162.compute-1.amazonaws.com/login.php
-
-alter table msg add like int;
-alter table goods add price int;
-
-ALTER TABLE `msg` ADD `like` `int`;
