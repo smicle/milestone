@@ -1,0 +1,53 @@
+@import url(https://fonts.googleapis.com/css?family=Abril+Fatface);
+@import url(https://fonts.googleapis.com/css?family=Noto+Sans+JP);
+
+html {
+  width: 100%;
+  height: 100%;
+  /* overflow: hidden; */
+}
+
+body {
+	width: 100%;
+  height: 100%;
+  margin: 0%;
+	font-family: 'Open Sans', sans-serif;
+  background: linear-gradient(-45deg, rgba(252, 176, 184, .6), rgba(240, 124, 255, .6)) fixed,
+    url(../img/sakura.jpg) fixed;
+  background-size: cover;
+  font-family: "Noto Sans JP";
+}
+
+input {
+	width: 100%;
+	margin-bottom: 10px;
+	border: none;
+	outline: none;
+	padding: 10px;
+	font-size: 13px;
+	color: rgb(41, 41, 41);
+	border: 1px solid rgba(255, 0, 0, 0.404);
+  border-radius: 4px;
+}
+
+.btn {
+  cursor: pointer;
+  display: inline-block;
+  padding: 0.5em 1em;
+  text-decoration: none;
+  background: white;
+  border-left: solid 6px #ff7c5c; /*左線*/
+  color: #ff7c5c; /*文字色*/
+  font-weight: bold;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.29);
+  width: 260px;
+  text-align: center;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.btn:active {
+  box-shadow: inset 0 0 2px rgba(128, 128, 128, 0.1);
+  transform: translateY(2px);
+}

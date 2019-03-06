@@ -7,6 +7,7 @@
 
   <link rel='icon' href='./favicon.ico'>
   <link rel='stylesheet' href='./css/loginPage.css'>
+  <link rel='stylesheet' href='./css/common.css'>
 
   <script src='./script/react.development.js'></script>
   <script src='./script/react-dom.development.js'></script>
@@ -51,7 +52,7 @@
           <h1>BulletinBoard</h1>
           <input type='text' name='id' placeholder='ユーザーId' required='required' value={this.state.userId} onChange={this.changeUserId} />
           <input type='password' name='password' placeholder='パスワード' required='required' value={this.state.password} onChange={this.changePassword} />
-          <a className='btn-sticky' onClick={this.submit}>ログイン</a>
+          <a className='btn' onClick={this.submit}>ログイン</a>
         </form>
       )
     }
@@ -88,7 +89,7 @@
           <input type='text' name='id' placeholder='ユーザーId' required='required' value={this.state.userId} onChange={this.changeUserId} />
           <input type='text' name='name' placeholder='ユーザーネーム' required='required' value={this.state.userName} onChange={this.changeUserName} />
           <input type='password' name='password' placeholder='パスワード' required='required' value={this.state.password} onChange={this.changePassword} />
-          <a className='btn-sticky' onClick={this.submit}>新規登録</a>
+          <a className='btn' onClick={this.submit}>新規登録</a>
         </form>
       )
     }
@@ -143,7 +144,7 @@
           <Route path='/signup' component={SignupForm} />
           <ErrorMessage />
           <div id='loginToggle' onClick={this.mordChange}>
-            <Link to={this.state.action} className='btn-sticky'>{this.state.text}</Link>
+            <Link to={this.state.action} className='btn'>{this.state.text}</Link>
           </div>
         </div>
       </HashRouter>

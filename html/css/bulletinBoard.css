@@ -1,0 +1,198 @@
+#screenContainer {
+  display: grid;
+  grid-template-rows: 60px 156px 1fr;
+  grid-template-columns: 300px 1fr 300px;
+  grid-template-areas:
+    'title   header search'
+    'profile main   .     '
+    '.       main   .     ';
+}
+
+#headerTitle {
+  grid-area: title;
+  background: rgba(255, 210, 210, 0.9);
+  /* 縦中央 */
+  vertical-align: middle;
+  line-height: 60px;
+  /* 横左寄せ */
+  padding-left: 10px;
+  text-align: left;
+}
+
+#headerTitle > a {
+  cursor: pointer;
+  font-family: 'Abril Fatface', cursive;
+  font-size: 40px;
+  color: rgb(41, 41, 41);
+  text-decoration: none;
+}
+
+#headerMargin {
+  grid-area: header;
+  background: rgba(255, 210, 210, 0.9);
+}
+
+#headerSearch {
+  grid-area: search;
+  background: rgba(255, 210, 210, 0.9);
+  position: relative;
+  padding-left: 20px;
+}
+
+#headerSearch > div > input {
+  position: absolute;
+  top: 50%;
+  -moz-transform : translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform : translateY(-50%);
+  width: 200px;
+}
+
+#headerSearch > div > a > div {
+  position: absolute;
+  top: 50%;
+  -moz-transform : translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform : translateY(-50%);
+  margin-left: 205px;
+  text-align: center;
+  background: white;
+  border-radius: 20px;
+  border: 2px solid rgba(255, 0, 0, 0.404);
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.29);
+  width: 36px;
+  height: 36px;
+}
+
+#headerSearch > div > a > div:active {
+  box-shadow: inset 0 0 2px rgba(128, 128, 128, 0.1);
+  margin-top: 2px;
+}
+
+#headerSearch > div > a > div > img {
+  padding: 6px;
+  width: 23px;
+  height: 23px;
+}
+
+#profileCard {
+  grid-area: profile;
+  margin: 5px;
+  border-radius: 4px;
+  background: rgba(250, 243, 234, 0.8);
+}
+
+#profileContainer {
+  display: grid;
+  grid-template-rows: 90px 50px 50px;
+  grid-template-columns: 145px 145px;
+  grid-template-areas:
+    'pName pName   '
+    'uPost uSignOut';
+}
+
+#profileName {
+  grid-area: pName;
+  background-color: rgba(255, 253, 242, 0.8);
+  margin: 10px;
+  border-radius: 4px;
+}
+
+#profileName > p {
+  font-size: 28px;
+  margin: 0px;
+  margin-left: 10px;
+  text-align: left;
+}
+
+#profileName > span {
+  margin: 10px;
+}
+
+#profileContainer > a {
+  margin: auto;
+  width: 100px;
+}
+
+.userPost {grid-area: uPost}
+.userSignOut {grid-area: uSignOut}
+
+#main {
+  grid-area: main;
+  margin: 5px;
+  border-radius: 4px;
+  background: rgba(250, 243, 234, 0.8);
+}
+
+#postContainer {
+  display: grid;
+  grid-template-rows: 50px;
+  grid-template-columns: 400px 1fr 100px;
+  grid-template-areas: 'pMsg pMsg pBtn';
+  margin: 10px;
+}
+
+#postContainer > input {
+  grid-area: pMsg;
+  margin: auto;
+}
+
+#postContainer > a {
+  grid-area: pBtn;
+  width: 50px;
+  height: 24px;
+  margin: 5px;
+  margin-left: 10px;
+  margin-right: 0px;
+  border-left: solid 6px red;
+  color: red;
+}
+
+.mainContainer {
+  display: grid;
+  grid-template-rows: 50px 1fr 50px;
+  grid-template-columns: 400px 1fr 100px;
+  grid-template-areas:
+    'dName .    dDel'
+    'dMsg  dMsg .   '
+    'dLike .    .   ';
+  margin: 10px;
+  background: rgba(255, 253, 242, 0.8);
+  border-radius: 4px;
+}
+
+.msgName {
+  grid-area: dName;
+  margin: 5px;
+}
+
+.msgName > span {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.msgDelete {
+  grid-area: dDel;
+  width: 50px;
+  height: 24px;
+  padding: 5px 10px;
+  margin: auto;
+}
+
+.displayMsg {
+  grid-area: dMsg;
+  font-size: 18px;
+  margin: 10px 5px;
+  margin-bottom: 30px;
+  word-wrap: break-word;
+}
+
+.displayLike {
+  grid-area: dLike;
+  width: 100px;
+  margin: 5px;
+  margin-top: 10px;
+  padding: 5px;
+  border-left: solid 6px rgba(85, 85, 255, 0.9);
+  color: rgba(85, 85, 255, 0.9);
+}
