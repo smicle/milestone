@@ -1,9 +1,0 @@
-n680cloud
-cloud680@gn.iwasaki.ac.jp
-uuaqsgygpcdq1!
-172.31.21.69
-milestone.cvut6lejm98r.us-east-1.rds.amazonaws.com:3306
-
-mysql -h xxxx.cniwpuihdejp.ap-northeast-1.rds.amazonaws.com:3306 -u username -p
-mysql -h mydbinstance1.cniwpuihdejp.ap-northeast-1.rds.amazonaws.com -P 3306 -u shu223 -p MyDB1
-mysql -h milestone.cvut6lejm98r.us-east-1.rds.amazonaws.com -P 3306 -u n680cloud -p 

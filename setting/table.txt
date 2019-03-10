@@ -29,4 +29,3 @@ INSERT INTO `user` (`id`, `password`, `name`, `lastlogin`) VALUES
 ('user02', 'pass02', 'jiro', '2018-02-01 00:00:00'),
 ('user03', 'pass03', 'hanako', '2018-02-01 00:00:00');
 COMMIT;
-

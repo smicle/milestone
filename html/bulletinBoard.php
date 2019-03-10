@@ -31,7 +31,7 @@
   <meta name='viewport' content='width=device-width, initial-scale=1.0'>
   <meta http-equiv='X-UA-Compatible' content='ie=edge'>
 
-  <link rel='icon' href='./favicon.ico'>
+  <link rel='icon' href='./img/favicon.ico'>
   <link rel='stylesheet' href='./css/common.css'>
   <link rel='stylesheet' href='./css/bulletinBoard.css'>
 
@@ -111,16 +111,14 @@
 
     changeText = e => this.setState({text : e.target.value})
 
-    render() {
-      return (
-        <div>
-          <input type='text' placeholder='検索' required='required' value={this.state.text} onChange={this.changeText} />
-          <Link to={this.state.text === '' ? '/' : `/search?${this.state.text}`}>
-            <div id='searchButton'><img src='./img/search.png' alt='search' /></div>
-          </Link>
-        </div>
-      )
-    }
+    render = _ => (
+      <div>
+        <input type='text' placeholder='検索' required='required' value={this.state.text} onChange={this.changeText} />
+        <Link to={this.state.text === '' ? '/' : `/search?${this.state.text}`}>
+          <div id='searchButton'><img src='./img/search.png' alt='search' /></div>
+        </Link>
+      </div>
+    )
   }
 
   const ProfileCard = _ => (
@@ -143,7 +141,7 @@
     }
 
     submit() {
-      const msg = this.state.msg
+      const msg  = this.state.msg
       const date = timeNow()
 
       if (!msgUpload(msg, date)) return
@@ -159,14 +157,12 @@
 
     changeMsg = e => this.setState({msg: e.target.value})
 
-    render() {
-      return (
-        <div id='postContainer'>
-          <input type='text' placeholder='いまどうしてる？' required='required' value={this.state.msg} onChange={this.changeMsg} />
-          <Link to='/' className='btn' onClick={this.submit}>投稿</Link>
-        </div>
-      )
-    }
+    render = _ => (
+      <div id='postContainer'>
+        <input type='text' placeholder='いまどうしてる？' required='required' value={this.state.msg} onChange={this.changeMsg} />
+        <Link to='/' className='btn' onClick={this.submit}>投稿</Link>
+      </div>
+    )
   }
 
   class MsgDelete extends React.Component {
@@ -200,7 +196,7 @@
   class MsgLike extends React.Component {
     constructor(props) {
       super(props)
-      this.state = {like: $like[this.props.i]}
+      this.state  = {like: $like[this.props.i]}
       this.submit = this.submit.bind(this)
     }
 
@@ -210,11 +206,9 @@
       this.setState({like: ++$like[i]})
     }
 
-    render() {
-      return (
-        <a className='displayLike btn' onClick={this.submit}>いいね！&ensp;{this.state.like}</a>
-      )
-    }
+    render = _ => (
+      <a className='displayLike btn' onClick={this.submit}>いいね！&ensp;{this.state.like}</a>
+    )
   }
 
   const MsgList = (k, i) => (
@@ -252,7 +246,7 @@
         if (param.slice(0, 1) == '@') {
           if (param.slice(1) !== $id[i]) return
         } else {
-          if ($msg[i].indexOf(param) === -1 && $name[i].indexOf(parameter) === -1) return
+          if ($msg[i].indexOf(param) === -1 && $name[i].indexOf(param) === -1) return
         }
         return MsgList(k, i)
       })
@@ -268,24 +262,20 @@
     </div>
   )
 
-  class ScreenLayout extends React.Component {
-    render () {
-      return (
-        <HashRouter>
-          <div id='screenContainer'>
-            {/* Header */}
-            <div id='headerTitle'><Link to='/'>BulletinBoard</Link></div>
-            <div id='headerMargin'></div>
-            <div id='headerSearch'><MsgSearch /></div>
+  const ScreenLayout = _ => (
+    <HashRouter>
+      <div id='screenContainer'>
+        {/* Header */}
+        <div id='headerTitle'><Link to='/'>BulletinBoard</Link></div>
+        <div id='headerMargin'></div>
+        <div id='headerSearch'><MsgSearch /></div>
 
-            {/* main */}
-            <div id='profileCard'><ProfileCard /></div>
-            <div id='main'><DisplayMain /></div>
-          </div>
-        </HashRouter>
-      )
-    }
-  }
+        {/* main */}
+        <div id='profileCard'><ProfileCard /></div>
+        <div id='main'><DisplayMain /></div>
+      </div>
+    </HashRouter>
+  )
 
   ReactDOM.render(
     <ScreenLayout />,

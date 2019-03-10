@@ -3,7 +3,7 @@
 
   $seqno = $_POST['seqno'];
 
-  $stmt = $pdo->prepare('DELETE FROM `msg` WHERE `msg`.`seqno` = ?');
+  $stmt = $pdo->prepare('DELETE FROM msg WHERE msg.seqno = ?');
   $stmt->bindValue(1, $seqno);
   $stmt->execute();
 ?>

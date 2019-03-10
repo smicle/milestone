@@ -1,0 +1,31 @@
+use mydb;
+CREATE TABLE `msg` (
+  `seqno` bigint(20) NOT NULL,
+  `id` varchar(20) NOT NULL,
+  `name` varchar(32) DEFAULT NULL,
+  `date` datetime DEFAULT NULL,
+  `msg` varchar(140) DEFAULT NULL
+) DEFAULT CHARSET=utf8;
+
+CREATE TABLE `user` (
+  `id` varchar(20) NOT NULL,
+  `password` char(34) DEFAULT NULL,
+  `name` varchar(32) DEFAULT NULL,
+  `lastlogin` datetime DEFAULT NULL
+) DEFAULT CHARSET=utf8;
+
+ALTER TABLE `msg`
+  ADD PRIMARY KEY (`seqno`);
+
+ALTER TABLE `user`
+  ADD PRIMARY KEY (`id`);
+
+ALTER TABLE `msg`
+  MODIFY `seqno` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=0;
+COMMIT;
+
+INSERT INTO `user` (`id`, `password`, `name`, `lastlogin`) VALUES
+('user01', 'pass01', 'taro', '2018-02-01 00:00:00'),
+('user02', 'pass02', 'jiro', '2018-02-01 00:00:00'),
+('user03', 'pass03', 'hanako', '2018-02-01 00:00:00');
+COMMIT;
